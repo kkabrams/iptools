@@ -9,7 +9,7 @@ int main(int argc,char *argv[]) {
  if(strchr(argv[1],':')) {
   inet_pton(AF_INET6,argv[1],&in6_addr);
   inet_ntop(AF_INET6,&in6_addr,in6s,sizeof(in6s));
-  printf("%s\n",in6s);
+  printf("normalized: %s\n",in6s);
  } else {
   inet_pton(AF_INET,argv[1],&addr);
   printf("hex: %x\n",htonl(addr));

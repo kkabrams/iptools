@@ -8,5 +8,5 @@ all: $(TARGETS)
 clean:
 	rm $(TARGETS)
 
-install:
+install: all
 	install $(TARGETS) $(PREFIX)/bin/
